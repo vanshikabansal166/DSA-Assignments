@@ -14,10 +14,10 @@ int main() {
     cout<<"Enter the size of the array:";
     cin>>size;
     
-    int arr[size];
+    int arr[size-1];
     cout<<"Enter "<< size-1<<" elements of the array in the range of 1 to "<< size;
-    for (int i = 0; i < size; i++) {
-        cin >> array[i];
+    for (int i = 0; i < size-1; i++) {
+        cin >> arr[i];
     }
     int temp;
     int count=0;
@@ -31,11 +31,11 @@ int main() {
            }
        }
 
-    int start = 0, end = size - 1;
+    int start = 0, end = size-2;
     int missing = -1; 
     while (start <= end) {
         int mid = (start + end) / 2;
-        if (array[mid] == mid + 1) {
+        if (arr[mid] == mid + 1) {
             start = mid + 1;
         } 
         else {
