@@ -57,7 +57,7 @@ int main() {
     
     if (rows1!=rows2 || cols1!=cols2) {
         cout<<"Matrix addition not possible (different sizes).";
-        return 0;
+        
     }
     
     cout<<"\nResultant Matrix in sparse form (row col val):\n";
