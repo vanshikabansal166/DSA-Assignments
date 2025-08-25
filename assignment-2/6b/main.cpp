@@ -64,25 +64,25 @@ int main() {
     int result[200][3], r=0;
     
     for (int i=0; i<k; i++) {
-        result[r][0] = triplet1[i][0];
-        result[r][1] = triplet1[i][1];
-        result[r][2] = triplet1[i][2];
+        result[r][0] = sparsematrix1[i][0];
+        result[r][1] = sparsematrix1[i][1];
+        result[r][2] = sparsematrix1[i][2];
         r++;
     }
     
     for (int j=0; j<m; j++) {
         bool found=false;
         for (int x=0; x<r; x++) {
-            if (result[x][0]==triplet2[j][0] && result[x][1]==triplet2[j][1]) {
-                result[x][2] += triplet2[j][2]; 
+            if (result[x][0]==sparsematrix2[j][0] && result[x][1]==sparsematrix2[j][1]) {
+                result[x][2] += sparsematrix2[j][2]; 
                 found=true;
                 break;
             }
         }
         if (!found) { 
-            result[r][0] = triplet2[j][0];
-            result[r][1] = triplet2[j][1];
-            result[r][2] = triplet2[j][2];
+            result[r][0] = sparsematrix2[j][0];
+            result[r][1] = sparsematrix2[j][1];
+            result[r][2] = sparsematrix2[j][2];
             r++;
         }
     }
